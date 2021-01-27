@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Courses-Suite]">
+  <test name="AddCourseTest(failed)">
+    <classes>
+      <class name="TestScripts.LoginTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="endSuite"/>
+          <include name="precondition"/>
+          <include name="testReportResult"/>
+        </methods>
+      </class> <!-- TestScripts.LoginTest -->
+      <class name="TestScripts.ATATest">
+        <methods>
+          <include name="addATADataTest"/>
+          <include name="testReportResult"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- TestScripts.ATATest -->
+      <class name="TestScripts.AssociatedFilesTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="testReportResult"/>
+        </methods>
+      </class> <!-- TestScripts.AssociatedFilesTest -->
+      <class name="TestScripts.AddLATTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="testReportResult"/>
+        </methods>
+      </class> <!-- TestScripts.AddLATTest -->
+      <class name="TestScripts.FAQTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="testReportResult"/>
+          <include name="FAQDeleteTest"/>
+        </methods>
+      </class> <!-- TestScripts.FAQTest -->
+      <class name="TestScripts.AwardsTest">
+        <methods>
+          <include name="awardsClearAllTest"/>
+          <include name="initialize"/>
+          <include name="testReportResult"/>
+        </methods>
+      </class> <!-- TestScripts.AwardsTest -->
+      <class name="TestScripts.AddCourseTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="testReportResult"/>
+        </methods>
+      </class> <!-- TestScripts.AddCourseTest -->
+      <class name="TestScripts.PVOTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="testReportResult"/>
+        </methods>
+      </class> <!-- TestScripts.PVOTest -->
+    </classes>
+  </test> <!-- AddCourseTest(failed) -->
+</suite> <!-- Failed suite [Courses-Suite] -->

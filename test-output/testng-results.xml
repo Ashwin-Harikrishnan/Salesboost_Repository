@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="24981" started-at="2021-01-20T10:33:58Z" finished-at="2021-01-20T10:34:23Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="24981" started-at="2021-01-20T10:33:58Z" finished-at="2021-01-20T10:34:23Z">
+      <class name="TestScripts.ATATest">
+        <test-method status="PASS" signature="precondition(org.testng.ITestContext, java.lang.String)[pri:0, instance:TestScripts.ATATest@6eebc39e]" name="precondition" is-config="true" duration-ms="14630" started-at="2021-01-20T16:03:43Z" finished-at="2021-01-20T16:03:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@d816dde]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- precondition -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:TestScripts.ATATest@6eebc39e]" name="initialize" is-config="true" duration-ms="549" started-at="2021-01-20T16:03:58Z" finished-at="2021-01-20T16:03:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="addATADataTest()[pri:1, instance:TestScripts.ATATest@6eebc39e]" name="addATADataTest" duration-ms="14534" started-at="2021-01-20T16:03:58Z" finished-at="2021-01-20T16:04:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addATADataTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:TestScripts.ATATest@6eebc39e]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-01-20T16:04:13Z" finished-at="2021-01-20T16:04:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addATADataTest status=SUCCESS method=ATATest.addATADataTest()[pri:1, instance:TestScripts.ATATest@6eebc39e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="addSnippetPageTest()[pri:2, instance:TestScripts.ATATest@6eebc39e]" name="addSnippetPageTest" duration-ms="9878" started-at="2021-01-20T16:04:13Z" finished-at="2021-01-20T16:04:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addSnippetPageTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:TestScripts.ATATest@6eebc39e]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-01-20T16:04:23Z" finished-at="2021-01-20T16:04:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addSnippetPageTest status=SUCCESS method=ATATest.addSnippetPageTest()[pri:2, instance:TestScripts.ATATest@6eebc39e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:TestScripts.ATATest@6eebc39e]" name="endSuite" is-config="true" duration-ms="662" started-at="2021-01-20T16:04:23Z" finished-at="2021-01-20T16:04:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSuite -->
+      </class> <!-- TestScripts.ATATest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

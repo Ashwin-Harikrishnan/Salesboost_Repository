@@ -1,0 +1,62 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Courses-Suite">
+
+	<test name="AddCourseTest">
+		<classes>
+			<class name="TestScripts.LoginTest">
+			</class>
+			<class name="TestScripts.AddCourseTest">
+				<methods>
+					<include name="addCourseTest"></include>
+					<include name="addCourseTestIncompleteDetails"></include>
+				</methods>
+			</class>
+			<class name="TestScripts.AddLATTest">
+				<methods>
+					<include name="addLATTest"></include>
+					<include name="addLATIncorrectDetails"></include>
+					<include name="deleteLAT"></include>
+				</methods>
+			</class>
+			<class name="TestScripts.PVOTest">
+				<methods>
+					<include name="addPVODataTest"></include>
+					<include name="addPVOScoreBasedTest"></include>
+					</methods>
+
+			</class>
+
+			<class name="TestScripts.FAQTest">
+				<methods>
+					<include name="FAQAddDetailsTest"></include>
+					<include name="FAQUpdateTest"></include>
+					<include name="FAQDeleteTest"></include>
+				</methods>
+			</class>
+
+			<class name="TestScripts.ATATest">
+				<methods>
+					<include name="addATADataTest"></include>
+					<include name="addSnippetPageTest"></include>
+				</methods>
+			</class>
+
+			<class name="TestScripts.AssociatedFilesTest">
+				<methods>
+					<include name="AssociatedPageAddFileButtonTest"></include>
+					<include name="AssociatedPageAddFileDataTest"></include>
+					<include name="AssociatedPageAddIncompleteFileDataTest"></include>
+				</methods>
+			</class>
+
+			<class name="TestScripts.AwardsTest">
+				<methods>
+					<include name="addAwardDataTest"></include>
+					<include name="awardsClearAllTest"></include>
+				</methods>
+			</class>
+
+		</classes>
+	</test>
+
+</suite>

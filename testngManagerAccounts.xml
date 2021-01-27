@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<test name="ManageIntgratedAccountsTest">
+    <classes>
+      <class name="TestScripts.ActiveUserTest"/>
+      <class name="TestScripts.DeactivatedUsersTest"/>
+      <class name="TestScripts.OpenRequestsTest"/>
+      <class name="TestScripts.RejectedRequestsTest"/>
+      </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
