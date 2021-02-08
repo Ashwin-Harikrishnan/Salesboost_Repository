@@ -46,7 +46,8 @@ public class FAQTest extends BaseClass{
 	@Test(priority =1)
 	public void FAQUpdateTest() {
 		try {
-	
+			eTest = eReports.createTest("Add FAQ");
+			eTest.assignCategory("Courses");
 		testData = TestDataObj.FAQData();
 		obj.login();
 		sleep(1000);
@@ -54,7 +55,7 @@ public class FAQTest extends BaseClass{
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("Course Three");
+		coursesObj.searchCourses("Course Two");
 		FAQobj.addQuestionAnswerDetails(testData[0], testData[1]);
 		FAQobj.updateFAQ();
 		sleep(1000);
@@ -73,6 +74,8 @@ public class FAQTest extends BaseClass{
 	@Test(priority = 2)
 	public static void FAQDeleteTest() {
 		try {
+			eTest = eReports.createTest("Delete FAQ");
+			eTest.assignCategory("Courses");
 		testData = TestDataObj.FAQData();
 		//obj.login();
 		sleep(1000);
@@ -80,7 +83,7 @@ public class FAQTest extends BaseClass{
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("TestCourse1");
+		coursesObj.searchCourses("Course Two");
 		FAQobj.addQuestionAnswerDetails(testData[0], testData[1]);
 		FAQobj.deleteFAQ();
 		sleep(1000);

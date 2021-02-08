@@ -79,6 +79,8 @@ public class AddCourseTest extends BaseClass {
 	@Test(priority = 1)
 	public void addCourseTestIncompleteDetails() {
 		try {
+			eTest = eReports.createTest("Add courses incomplete");
+			eTest.assignCategory("Courses");
 			testData = TestDataObj.AddCourseData();
 			//obj.login();
 			sleep(1000);

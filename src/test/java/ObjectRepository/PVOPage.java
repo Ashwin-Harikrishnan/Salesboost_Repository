@@ -69,7 +69,7 @@ public class PVOPage extends BaseClass {
 		public void PVOScoreBasedPostQns(boolean equalWeightageCheck, String minimumPass) {
 			sleep(2000);
 			System.out.println("POST SCOREBASED START");
-			//scoreQuizActivationSlider.click();
+			scoreQuizActivationSlider.click();
 		
 			sleep(2000);
 			/*if(equalWeightageCheck)

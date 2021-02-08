@@ -50,6 +50,8 @@ public class AwardsTest extends BaseClass{
 	@Test(priority = 1)
 	public void addAwardDataTest() {
 		try {
+			eTest = eReports.createTest("Add Awards");
+			eTest.assignCategory("Courses");
 		testData = TestDataObj.AwardData();
 		//String verification = "";
 		obj.login();
@@ -58,25 +60,11 @@ public class AwardsTest extends BaseClass{
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("Course Three");
+		coursesObj.searchCourses("Course Two");
 		awardsObj.editAwardsPage(testData[0], testData[1],testData[2] ,testData[3], testData[4]);
 		sleep(1000);
 		awardsObj.addUpdateAwards();
 		sleep(2000);
-		
-		//VERIFICATION
-		/*ArrayList<String> actualArray = new ArrayList<String>();
-		verification = awardsObj.CertificateSignName.getText();
-		actualArray.add(verification);
-		verification = awardsObj.CertificateSignTitle.getText();
-		actualArray.add(verification);
-		System.out.println("ACTUAL: "+actualArray);
-		
-		ArrayList<String> expectedArray = new ArrayList<String>();
-		expectedArray.add(testData[1]);
-		expectedArray.add(testData[2]);
-		System.out.println("EXPECTED: "+expectedArray);*/
-		
 		actualstring = awardsObj.CertificateSignName.getText();
 		expectedstring = testData[1];
 		
@@ -88,8 +76,11 @@ public class AwardsTest extends BaseClass{
 		Assert.assertEquals(actualstring, expectedstring);
 	}
 	
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void awardsClearAllTest() {
+		try {
+		eTest = eReports.createTest("Clear awards");
+		eTest.assignCategory("Courses");
 		testData = TestDataObj.AwardData();
 		//obj.login();
 		sleep(1000);
@@ -97,10 +88,19 @@ public class AwardsTest extends BaseClass{
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("TestCourse1");
+		coursesObj.searchCourses("Course Two");
 		awardsObj.editAwardsPage(testData[0], testData[1],testData[2] ,testData[3], testData[4]);
 		awardsObj.clearAwards();
+		actualstring = awardsObj.CertificateSignName.getText();
+		expectedstring = "";
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertEquals(actualstring, expectedstring);
 	}
+	
 	private static void sleep(long m) {
 		try {
 			Thread.sleep(m);

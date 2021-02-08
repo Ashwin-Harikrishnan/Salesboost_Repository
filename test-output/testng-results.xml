@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24981" started-at="2021-01-20T10:33:58Z" finished-at="2021-01-20T10:34:23Z">
+  <suite name="Default suite" duration-ms="14139" started-at="2021-02-08T07:19:14Z" finished-at="2021-02-08T07:19:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24981" started-at="2021-01-20T10:33:58Z" finished-at="2021-01-20T10:34:23Z">
-      <class name="TestScripts.ATATest">
-        <test-method status="PASS" signature="precondition(org.testng.ITestContext, java.lang.String)[pri:0, instance:TestScripts.ATATest@6eebc39e]" name="precondition" is-config="true" duration-ms="14630" started-at="2021-01-20T16:03:43Z" finished-at="2021-01-20T16:03:58Z">
+    <test name="Default test" duration-ms="14139" started-at="2021-02-08T07:19:14Z" finished-at="2021-02-08T07:19:28Z">
+      <class name="TestScripts.AwardsTest">
+        <test-method status="PASS" signature="precondition(org.testng.ITestContext, java.lang.String)[pri:0, instance:TestScripts.AwardsTest@6eebc39e]" name="precondition" is-config="true" duration-ms="9000" started-at="2021-02-08T12:49:05Z" finished-at="2021-02-08T12:49:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@d816dde]]>
+                <![CDATA[org.testng.TestRunner@7fcff1b9]]>
               </value>
             </param>
             <param index="1">
@@ -23,45 +23,71 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- precondition -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:TestScripts.ATATest@6eebc39e]" name="initialize" is-config="true" duration-ms="549" started-at="2021-01-20T16:03:58Z" finished-at="2021-01-20T16:03:58Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:TestScripts.AwardsTest@6eebc39e]" name="initialize" is-config="true" duration-ms="577" started-at="2021-02-08T12:49:14Z" finished-at="2021-02-08T12:49:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="addATADataTest()[pri:1, instance:TestScripts.ATATest@6eebc39e]" name="addATADataTest" duration-ms="14534" started-at="2021-01-20T16:03:58Z" finished-at="2021-01-20T16:04:13Z">
+        <test-method status="FAIL" signature="addAwardDataTest()[pri:1, instance:TestScripts.AwardsTest@6eebc39e]" name="addAwardDataTest" duration-ms="13545" started-at="2021-02-08T12:49:14Z" finished-at="2021-02-08T12:49:28Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Test Name] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Test Name] but found []
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at TestScripts.AwardsTest.addAwardDataTest(AwardsTest.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:746)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addATADataTest -->
-        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:TestScripts.ATATest@6eebc39e]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-01-20T16:04:13Z" finished-at="2021-01-20T16:04:13Z">
+        </test-method> <!-- addAwardDataTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:TestScripts.AwardsTest@6eebc39e]" name="testReportResult" is-config="true" duration-ms="4" started-at="2021-02-08T12:49:28Z" finished-at="2021-02-08T12:49:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addATADataTest status=SUCCESS method=ATATest.addATADataTest()[pri:1, instance:TestScripts.ATATest@6eebc39e] output={null}]]]>
+                <![CDATA[[TestResult name=addAwardDataTest status=FAILURE method=AwardsTest.addAwardDataTest()[pri:1, instance:TestScripts.AwardsTest@6eebc39e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testReportResult -->
-        <test-method status="PASS" signature="addSnippetPageTest()[pri:2, instance:TestScripts.ATATest@6eebc39e]" name="addSnippetPageTest" duration-ms="9878" started-at="2021-01-20T16:04:13Z" finished-at="2021-01-20T16:04:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addSnippetPageTest -->
-        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:TestScripts.ATATest@6eebc39e]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-01-20T16:04:23Z" finished-at="2021-01-20T16:04:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=addSnippetPageTest status=SUCCESS method=ATATest.addSnippetPageTest()[pri:2, instance:TestScripts.ATATest@6eebc39e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testReportResult -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:TestScripts.ATATest@6eebc39e]" name="endSuite" is-config="true" duration-ms="662" started-at="2021-01-20T16:04:23Z" finished-at="2021-01-20T16:04:23Z">
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:TestScripts.AwardsTest@6eebc39e]" name="endSuite" is-config="true" duration-ms="971" started-at="2021-02-08T12:49:28Z" finished-at="2021-02-08T12:49:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSuite -->
-      </class> <!-- TestScripts.ATATest -->
+      </class> <!-- TestScripts.AwardsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

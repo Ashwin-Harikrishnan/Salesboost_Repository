@@ -48,6 +48,8 @@ public class AddLATTest extends BaseClass{
 	@Test(priority = 1)
 	public void addLATTest() {
 		try {
+			eTest = eReports.createTest("Add LAT");
+			eTest.assignCategory("Courses");
 		testData = TestDataObj.LATData();
 		obj.login();
 		sleep(1000);
@@ -55,7 +57,7 @@ public class AddLATTest extends BaseClass{
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("Course Three");
+		coursesObj.searchCourses("Course Two");
 		LATobj.editLATPage(testData[0], testData[1], testData[2]);
 		LATobj.AddUpdateLATBtn.click();
 		sleep(3000);
@@ -71,6 +73,8 @@ public class AddLATTest extends BaseClass{
 	
 	@Test(priority = 2)
 	public void addLATIncorrectDetails() {
+		eTest = eReports.createTest("Add LAT incomplete");
+		eTest.assignCategory("Courses");
 		testData = TestDataObj.LATData();
 		//obj.login();
 		sleep(1000);
@@ -78,19 +82,21 @@ public class AddLATTest extends BaseClass{
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("TestCourse1");
+		coursesObj.searchCourses("Course Two");
 		LATobj.editLATError(testData[0], testData[1]);
 	}
 	
 	@Test(priority = 3)
 	public void deleteLAT() {
+		eTest = eReports.createTest("Delete LAT");
+		eTest.assignCategory("Courses");
 		//obj.login();
 		sleep(1000);
 		menuObj.ContentBtn.click();
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("TestCourse1");
+		coursesObj.searchCourses("Course Two");
 		sleep(1000);
 		LATobj.deleteLAT();
 		

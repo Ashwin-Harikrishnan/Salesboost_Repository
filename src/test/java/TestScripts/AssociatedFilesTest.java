@@ -46,6 +46,8 @@ public class AssociatedFilesTest extends BaseClass{
 	@Test(priority = 1)
 	public void AssociatedPageAddFileDataTest() {
 		try {
+			eTest = eReports.createTest("Add Associated files details");
+			eTest.assignCategory("Courses");
 		testData = TestDataObj.AssociatedFilesData();
 		obj.login();
 		sleep(1000);
@@ -53,7 +55,7 @@ public class AssociatedFilesTest extends BaseClass{
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("Course Three");
+		coursesObj.searchCourses("Course Two");
 		AFobj.addFileButtonTest();
 		AFobj.editAssociatedFilesTest(testData[0], testData[1]);
 		sleep(1000);
@@ -69,13 +71,15 @@ public class AssociatedFilesTest extends BaseClass{
 	
 	@Test(priority = 2)
 	public void AssociatedPageAddIncompleteFileDataTest() {
+		eTest = eReports.createTest("Add Associated files incomplete");
+		eTest.assignCategory("Courses");
 		testData = TestDataObj.AssociatedFilesData();
 		sleep(1000);
 		menuObj.ContentBtn.click();
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("TestCourse1");
+		coursesObj.searchCourses("Course Two");
 		AFobj.addFileButtonTest();
 		AFobj.associatedFileIncompleteDetailsTest(testData[0]);
 	}

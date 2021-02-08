@@ -49,9 +49,11 @@ public class PVOTest extends BaseClass{
 
 	}
 	
-	@Test(priority =1)
+	//@Test(priority =1)
 	public void addPVODataTest() {
 		try {
+			eTest = eReports.createTest("Add PVO");
+			eTest.assignCategory("Courses");
 		testData = TestDataObj.PVOData();
 		obj.login();
 		sleep(1000);
@@ -59,7 +61,7 @@ public class PVOTest extends BaseClass{
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("Course Three");
+		coursesObj.searchCourses("Course Two");
 		PVOobj.addPVOData(testData[0], testData[1], testData[2], testData[3]);
 		PVOobj.updatePVO();
 		sleep(1000);
@@ -76,6 +78,8 @@ public class PVOTest extends BaseClass{
 	@Test(priority = 2)
 	public void addPVOScoreBasedTest() {
 		try {
+			eTest = eReports.createTest("Add PVO scorebased");
+			eTest.assignCategory("Courses");
 		testData = TestDataObj.PVOData();
 		obj.login();
 		sleep(1000);
@@ -83,7 +87,7 @@ public class PVOTest extends BaseClass{
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("Course Three");
+		coursesObj.searchCourses("Course Two");
 		PVOobj.addPVOData(testData[0], testData[1], testData[2], testData[3]);
 		PVOQnsobj.addQuestions(testData[7], testData[8], Boolean.parseBoolean(testData[9]), testData[10]);
 		PVOobj.PVOScoreBasedPostQns(Boolean.parseBoolean(testData[6]), testData[5]);

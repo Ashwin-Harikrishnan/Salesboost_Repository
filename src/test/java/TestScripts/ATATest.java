@@ -49,7 +49,8 @@ public class ATATest extends BaseClass{
 	@Test(priority = 1)
 	public void addATADataTest() {
 		try {
-			
+			eTest = eReports.createTest("Add ATA");
+			eTest.assignCategory("Courses");
 		
 		testData = TestDataObj.ATAData();
 		obj.login();
@@ -58,7 +59,7 @@ public class ATATest extends BaseClass{
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("Course Three");
+		coursesObj.searchCourses("Course Two");
 		ATAobj.editATAPage(testData[0], testData[1], testData[2]);
 		ATAobj.updateATA();
 		sleep(1000);
@@ -76,6 +77,8 @@ public class ATATest extends BaseClass{
 	@Test(priority = 2)
 	public void addSnippetPageTest() {
 		try {
+			eTest = eReports.createTest("Add ATA snippet");
+			eTest.assignCategory("Courses");
 		testData = TestDataObj.ATAData();
 		//obj.login();
 		sleep(1000);
@@ -83,7 +86,7 @@ public class ATATest extends BaseClass{
 		sleep(1000);
 		menuObj.CoursesBtn.click();
 		sleep(1000);
-		coursesObj.searchCourses("Course Three");
+		coursesObj.searchCourses("Course Two");
 		sleep(1000);
 		ATAobj.ATATabBtn.click();
 		snippetObj.addSnippet(testData[3], testData[4]);
