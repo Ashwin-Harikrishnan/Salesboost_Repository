@@ -72,7 +72,7 @@ public class BaseClass {
 	public Date date;
 	public static ExtentSparkReporter esReporter;
 	public static ExtentReports eReports;
-	public String log4jConfPath = projectFolder + "/src/test/java/com/Salesboost_Adminpanel/resources/Log4j.properties";
+	public String log4jConfPath = projectFolder + "/src/test/resources/Log4j.properties";
 	public String logPath = "";
 	public File directory;
 
