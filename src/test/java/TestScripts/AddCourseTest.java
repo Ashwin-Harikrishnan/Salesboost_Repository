@@ -50,8 +50,10 @@ public class AddCourseTest extends BaseClass {
 		try {
 			eTest = eReports.createTest("Add courses");
 			eTest.assignCategory("Courses");
+			log.info("Entered add courses test");
 			testData = TestDataObj.AddCourseData();
 			obj.login();
+			log.info("Login method complete");
 			sleep(1000);
 			menuObj.ContentBtn.click();
 			sleep(1000);
@@ -69,10 +71,12 @@ public class AddCourseTest extends BaseClass {
 
 		} catch (Exception e) {
 			System.out.println(e);
+			log.info("Entered verification method");
 		}
 
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		assertTrue(actualstring.contains(expectedstring));
+		log.info("Verification complete");
 
 	}
 
@@ -81,6 +85,7 @@ public class AddCourseTest extends BaseClass {
 		try {
 			eTest = eReports.createTest("Add courses incomplete");
 			eTest.assignCategory("Courses");
+			log.info("Entered add courses test Incomplete data");
 			testData = TestDataObj.AddCourseData();
 			//obj.login();
 			sleep(1000);
@@ -96,10 +101,12 @@ public class AddCourseTest extends BaseClass {
 			expectedstring = "Add Course:";
 		} catch (Exception e) {
 			System.out.println(e);
+			log.info("Entered verification method");
 		}
 
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		assertTrue(actualstring.contains(expectedstring));
+		log.info("Verification complete");
 
 	}
 

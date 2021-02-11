@@ -54,8 +54,10 @@ public class PVOTest extends BaseClass{
 		try {
 			eTest = eReports.createTest("Add PVO");
 			eTest.assignCategory("Courses");
+			log.info("Entered add PVO test");
 		testData = TestDataObj.PVOData();
 		obj.login();
+		log.info("Login complete");
 		sleep(1000);
 		menuObj.ContentBtn.click();
 		sleep(1000);
@@ -67,12 +69,14 @@ public class PVOTest extends BaseClass{
 		sleep(1000);
 		actualstring = PVOobj.PVOVideoName.getText();
 		expectedstring = testData[2];
+		log.info("Entered verification method");
 		}
 		catch (Exception e) {
 			System.out.println(e);
 		}
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		assertTrue(actualstring.contains(expectedstring));
+		log.info("Verification complete");
 		
 	}
 	@Test(priority = 2)
@@ -80,8 +84,9 @@ public class PVOTest extends BaseClass{
 		try {
 			eTest = eReports.createTest("Add PVO scorebased");
 			eTest.assignCategory("Courses");
+			log.info("Entered add PVO scorebased");
 		testData = TestDataObj.PVOData();
-		obj.login();
+		//obj.login();
 		sleep(1000);
 		menuObj.ContentBtn.click();
 		sleep(1000);
@@ -95,12 +100,14 @@ public class PVOTest extends BaseClass{
 		sleep(1000);
 		actualstring = PVOobj.PVOVideoName.getText();
 		expectedstring = testData[2];
+		log.info("Entered verification method");
 		}
 		catch (Exception e) {
 			System.out.println(e);
 		}
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		assertTrue(actualstring.contains(expectedstring));
+		log.info("Verification complete");
 	}
 	
 

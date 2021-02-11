@@ -50,8 +50,10 @@ public class AddLATTest extends BaseClass{
 		try {
 			eTest = eReports.createTest("Add LAT");
 			eTest.assignCategory("Courses");
+			log.info("Entered add LAT test");
 		testData = TestDataObj.LATData();
 		obj.login();
+		log.info("Login Complete");
 		sleep(1000);
 		menuObj.ContentBtn.click();
 		sleep(1000);
@@ -66,15 +68,19 @@ public class AddLATTest extends BaseClass{
 		}
 		catch (Exception e) {
 			System.out.println(e);
+			log.info("Entered verification method");
 		}
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		assertTrue(actualstring.contains(expectedstring));
+		log.info("Verification complete");
 	}
 	
 	@Test(priority = 2)
 	public void addLATIncorrectDetails() {
+		try {
 		eTest = eReports.createTest("Add LAT incomplete");
 		eTest.assignCategory("Courses");
+		log.info("Entered add LAT test incomplete details");
 		testData = TestDataObj.LATData();
 		//obj.login();
 		sleep(1000);
@@ -84,12 +90,23 @@ public class AddLATTest extends BaseClass{
 		sleep(1000);
 		coursesObj.searchCourses("Course Two");
 		LATobj.editLATError(testData[0], testData[1]);
+		actualstring = LATobj.LATVideoName.getText();
+		expectedstring = "";
+		}
+		catch (Exception e) {
+			System.out.println(e);
+			log.info("Entered verification method");
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		assertTrue(actualstring.contains(expectedstring));
+		log.info("Verification complete");
 	}
 	
 	@Test(priority = 3)
 	public void deleteLAT() {
 		eTest = eReports.createTest("Delete LAT");
 		eTest.assignCategory("Courses");
+		log.info("Entered delete LAT test");
 		//obj.login();
 		sleep(1000);
 		menuObj.ContentBtn.click();
